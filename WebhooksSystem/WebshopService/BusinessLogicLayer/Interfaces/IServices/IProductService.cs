@@ -1,4 +1,5 @@
 using System;
+using DataAccessLayer.Entities;
 
 namespace BusinessLogicLayer.Interfaces.IServices;
 

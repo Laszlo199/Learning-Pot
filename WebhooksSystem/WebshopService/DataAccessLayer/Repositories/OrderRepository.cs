@@ -1,5 +1,6 @@
 using System;
 using DataAccessLayer.Entities;
+using DataAccessLayer.Interfaces.IRepositories;
 
 namespace DataAccessLayer.Repositories;
 

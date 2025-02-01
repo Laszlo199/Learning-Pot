@@ -1,9 +1,9 @@
 using System;
 using DataAccessLayer.Entities;
 
-namespace BusinessLogicLayer.Interfaces.IServices;
+namespace BusinessLogicLayer.Interfaces.IRepositories;
 
-public interface IOrderService
+public interface IOrderRepository
 {
     Task<Order> CreateOrder(Order order);
     Task<IEnumerable<Order>> GetAllOrder();
