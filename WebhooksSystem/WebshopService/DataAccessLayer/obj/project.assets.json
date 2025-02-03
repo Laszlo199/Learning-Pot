@@ -911,16 +911,6 @@
         "build": {
           "buildTransitive/net6.0/_._": {}
         }
-      },
-      "BusinessLogicLayer/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/BusinessLogicLayer.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BusinessLogicLayer.dll": {}
-        }
       }
     }
   },
@@ -2783,16 +2773,10 @@
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
-    },
-    "BusinessLogicLayer/1.0.0": {
-      "type": "project",
-      "path": "../BusinessLogicLayer/BusinessLogicLayer.csproj",
-      "msbuildProject": "../BusinessLogicLayer/BusinessLogicLayer.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "BusinessLogicLayer >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.1",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.1",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 9.0.3"
@@ -2830,11 +2814,7 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {
-            "C:\\Soma\\Repos\\Learning-Pot\\WebhooksSystem\\WebshopService\\BusinessLogicLayer\\BusinessLogicLayer.csproj": {
-              "projectPath": "C:\\Soma\\Repos\\Learning-Pot\\WebhooksSystem\\WebshopService\\BusinessLogicLayer\\BusinessLogicLayer.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
