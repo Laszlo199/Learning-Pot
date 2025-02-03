@@ -8,13 +8,18 @@ namespace BusinessLogicLayer.Services;
 public class ProductService : IProductService
 {
     private readonly IProductRepository _productRepository;
-    public Task<Product> CreateProduct(Product product)
+
+    public ProductService(IProductRepository productRepository)
     {
-        throw new NotImplementedException();
+        _productRepository = productRepository;
+    }
+    public async Task<Product> CreateProduct(Product product)
+    {
+        return await _productRepository.CreateProduct(product);
     }
 
-    public Task<IEnumerable<Product>> GetAllProduct()
+    public async Task<IEnumerable<Product>> GetAllProduct()
     {
-        throw new NotImplementedException();
+        return await _productRepository.GetAllProduct();
     }
 }

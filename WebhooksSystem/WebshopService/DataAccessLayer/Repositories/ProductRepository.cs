@@ -15,15 +15,15 @@ public class ProductRepository : IProductRepository
     public async Task<Product> CreateProduct(Product product)
     {
         var sql = "INSERT INTO Product (Name, Description, Price, StockQuantity) VALUES(@p0, @p1, @p2, @p3)";
-        await _context.Database.ExecuteSqlRawAsync(sql,
+        await _context.Database
+        .ExecuteSqlRawAsync(
+            sql,
             product.Name,
             product.Description,
             product.Price,
             product.StockQuantity
         );
-
         await _context.SaveChangesAsync();
-
         return product;
     }
 
