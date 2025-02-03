@@ -4,5 +4,5 @@ namespace PresentationLayer.MinimalAPIs;
 
 public class OrderEndPoints
 {
-
+    
 }
