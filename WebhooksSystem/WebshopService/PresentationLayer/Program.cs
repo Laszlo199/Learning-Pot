@@ -1,7 +1,9 @@
 using BusinessLogicLayer.Interfaces.IServices;
 using BusinessLogicLayer.Services;
+using DataAccessLayer;
 using DataAccessLayer.Interfaces.IRepositories;
 using DataAccessLayer.Repositories;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,16 +11,15 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
-//Repos
+//Register Repos and Services
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
-
-//Services
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IProductService, ProductService>();
 
-//Database
-
+//Register Database
+builder.Services.AddDbContext<WebShopDbContext>(options => 
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 
 var app = builder.Build();
