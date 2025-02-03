@@ -4,14 +4,14 @@ using DataAccessLayer.Entities;
 
 namespace BusinessLogicLayer.Services;
 
-public class ProductService : IOrderService
+public class ProductService : IProductService
 {
-    public Task<Order> CreateOrder(Order order)
+    public Task<Product> CreateProduct(Product product)
     {
         throw new NotImplementedException();
     }
 
-    public Task<IEnumerable<Order>> GetAllOrder()
+    public Task<IEnumerable<Product>> GetAllProduct()
     {
         throw new NotImplementedException();
     }
