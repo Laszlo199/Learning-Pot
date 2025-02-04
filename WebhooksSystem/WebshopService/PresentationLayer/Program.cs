@@ -4,6 +4,7 @@ using DataAccessLayer;
 using DataAccessLayer.Interfaces.IRepositories;
 using DataAccessLayer.Repositories;
 using Microsoft.EntityFrameworkCore;
+using PresentationLayer.MinimalAPIs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,5 +33,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+//Minimal APIs
+app.MapProductEndPoints();
 
 app.Run();
