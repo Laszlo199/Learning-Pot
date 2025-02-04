@@ -1,8 +1,38 @@
 using System;
+using BusinessLogicLayer.Interfaces.IServices;
+using DataAccessLayer.Entities;
 
 namespace PresentationLayer.MinimalAPIs;
 
-public class OrderEndPoints
+public static class OrderEndPoints
 {
-    
+public static void MapOrderEndPoints(this IEndpointRouteBuilder app)
+    {
+        var product = app.MapGroup("products");
+
+        product.MapGet("/", GetAll);
+        //product.MapPost("/", Create);
+    }
+
+    static async Task<IResult> GetAll(IOrderService service)
+    {
+        var orders = await service.GetAllOrder();
+        return TypedResults.Ok(orders);
+    }
+    /*
+    static async Task<IResult> Create(IOrderService service, Order order)
+    {
+        var newOrder = new Order
+        {
+            Name = product.Name,
+            Description = product.Description,
+            Price = product.Price,
+            StockQuantity  = product.StockQuantity
+        };
+
+        await service.CreateProduct(newOrder);
+
+        return TypedResults.Created($"Product '{newOrder.Name}' created successfully.");
+    }
+    */
 }
