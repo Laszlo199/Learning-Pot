@@ -20,8 +20,8 @@ public class OrderRepository : IOrderRepository
         .ExecuteSqlRawAsync(
             sql,
             order.OrderItems,
-            order.CustomerId,
-            order.Customer
+            order.Status,
+            order.CustomerId
         );
         await _context.SaveChangesAsync();
         return order;
