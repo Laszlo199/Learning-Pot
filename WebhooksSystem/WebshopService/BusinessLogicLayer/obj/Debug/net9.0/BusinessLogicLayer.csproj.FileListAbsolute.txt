@@ -1,0 +1,16 @@
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\bin\Debug\net9.0\BusinessLogicLayer.deps.json
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\bin\Debug\net9.0\BusinessLogicLayer.dll
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\bin\Debug\net9.0\BusinessLogicLayer.pdb
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\bin\Debug\net9.0\DataAccessLayer.dll
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\bin\Debug\net9.0\DataAccessLayer.pdb
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\obj\Debug\net9.0\BusinessLogicLayer.csproj.AssemblyReference.cache
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\obj\Debug\net9.0\BusinessLogicLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\obj\Debug\net9.0\BusinessLogicLayer.AssemblyInfoInputs.cache
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\obj\Debug\net9.0\BusinessLogicLayer.AssemblyInfo.cs
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\obj\Debug\net9.0\BusinessLogicLayer.csproj.CoreCompileInputs.cache
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\obj\Debug\net9.0\BusinessLogicLayer.sourcelink.json
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\obj\Debug\net9.0\Business.450209FB.Up2Date
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\obj\Debug\net9.0\BusinessLogicLayer.dll
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\obj\Debug\net9.0\refint\BusinessLogicLayer.dll
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\obj\Debug\net9.0\BusinessLogicLayer.pdb
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\BusinessLogicLayer\obj\Debug\net9.0\ref\BusinessLogicLayer.dll

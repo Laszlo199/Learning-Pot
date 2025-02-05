@@ -1,0 +1,15 @@
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\bin\Debug\net9.0\DataAccessLayer.deps.json
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\bin\Debug\net9.0\DataAccessLayer.runtimeconfig.json
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\bin\Debug\net9.0\DataAccessLayer.dll
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\bin\Debug\net9.0\DataAccessLayer.pdb
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.csproj.AssemblyReference.cache
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.AssemblyInfoInputs.cache
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.AssemblyInfo.cs
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.sourcelink.json
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.dll
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\obj\Debug\net9.0\refint\DataAccessLayer.dll
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.pdb
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\obj\Debug\net9.0\DataAccessLayer.genruntimeconfig.cache
+C:\Soma\Repos\Learning-Pot\WebhooksSystem\WebshopService\DataAccessLayer\obj\Debug\net9.0\ref\DataAccessLayer.dll
