@@ -8,7 +8,7 @@ public static class OrderEndPoints
 {
 public static void MapOrderEndPoints(this IEndpointRouteBuilder app)
     {
-        var product = app.MapGroup("products");
+        var product = app.MapGroup("orders");
 
         product.MapGet("/", GetAll);
         //product.MapPost("/", Create);
