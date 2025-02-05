@@ -15,7 +15,7 @@ public class OrderRepository : IOrderRepository
     }
     public async Task<Order> CreateOrder(Order order)
     {
-        var sql = "INSERT INTO Order (OrderItems, CustomerId, Customer) VALUES(@p0, @p1, @p2)";
+        var sql = "INSERT INTO Orders (OrderItems, CustomerId, Customer) VALUES(@p0, @p1, @p2)";
         await _context.Database
         .ExecuteSqlRawAsync(
             sql,
@@ -30,7 +30,7 @@ public class OrderRepository : IOrderRepository
     public async Task<IEnumerable<Order>> GetAllOrder()
     {
         return await _context.Orders
-        .FromSqlRaw($"SELECT Id, OrderItems, CustomerId, Customer FROM Order")
+        .FromSqlRaw($"SELECT Id, OrderItems, CustomerId, Customer FROM Orders")
         .ToListAsync();
     }
 }
