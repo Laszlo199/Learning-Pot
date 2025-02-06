@@ -24,9 +24,9 @@ public static void MapOrderEndPoints(this IEndpointRouteBuilder app)
     {
         var newOrder = new Order
         {
-            OrderItems = order.OrderItems,
+            CostumerName = order.CostumerName,
             Status = order.Status,
-            CustomerId  = order.CustomerId
+            OrderDate  = order.OrderDate
         };
 
         await service.CreateOrder(newOrder);

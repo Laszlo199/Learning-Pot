@@ -15,33 +15,24 @@ public class OrderRepository : IOrderRepository
     }
     public async Task<Order> CreateOrder(Order order)
     {
-        var sql = @"INSERT INTO Orders (OrderItems, Status, CustomerId) 
+        var sql = @"INSERT INTO Orders (CostumerName, Status, OrderDate) 
                     VALUES(@p0, @p1, @p2)";
         await _context.Database
         .ExecuteSqlRawAsync(
             sql,
-            order.OrderItems,
+            order.CostumerName,
             order.Status,
-            order.CustomerId
+            order.OrderDate
         );
 
-        foreach(var item in order.OrderItems)
-        {
-            var sqlOrderItem = @"INSERT INTO OrderItems (OrderItemId, OrderId, ProductId, Quantity, Price) 
-                            VALUES (@p0, @p1, @p2, @p3, @p4)";
-                            
-            await _context.Database.ExecuteSqlRawAsync(sqlOrderItem, item.OrderItemId, order.Id, item.ProductId, item.Quantity, item.Price);
-        }
-        
         return order;
 
     }
 
     public async Task<IEnumerable<Order>> GetAllOrder()
     {
-        var sql = @"SELECT o.Id, o.Status, o.CustomerId, oi.OrderItemId, oi.ProductId, oi.Quantity, oi.Price
-                FROM Orders o
-                LEFT JOIN OrderItems oi ON o.Id = oi.OrderId";
+        var sql = @"SELECT Id, CostumerName, Status, oi.OrderItemId, OrderDate
+                FROM Orders";
 
         var result = await _context.Orders
             .FromSqlRaw(sql)
