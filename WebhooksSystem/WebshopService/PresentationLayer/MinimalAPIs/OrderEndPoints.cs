@@ -11,7 +11,7 @@ public static void MapOrderEndPoints(this IEndpointRouteBuilder app)
         var product = app.MapGroup("orders");
 
         product.MapGet("/", GetAll);
-        //product.MapPost("/", Create);
+        product.MapPost("/", Create);
     }
 
     static async Task<IResult> GetAll(IOrderService service)
@@ -19,20 +19,19 @@ public static void MapOrderEndPoints(this IEndpointRouteBuilder app)
         var orders = await service.GetAllOrder();
         return TypedResults.Ok(orders);
     }
-    /*
+    
     static async Task<IResult> Create(IOrderService service, Order order)
     {
         var newOrder = new Order
         {
-            Name = product.Name,
-            Description = product.Description,
-            Price = product.Price,
-            StockQuantity  = product.StockQuantity
+            OrderItems = order.OrderItems,
+            Status = order.Status,
+            CustomerId  = order.CustomerId
         };
 
-        await service.CreateProduct(newOrder);
+        await service.CreateOrder(newOrder);
 
-        return TypedResults.Created($"Product '{newOrder.Name}' created successfully.");
+        return TypedResults.Created($"Orders '{newOrder.OrderItems}' created successfully.");
     }
-    */
+    
 }
