@@ -5,8 +5,6 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebhooksSystem", "WebhooksSystem", "{459EB364-6D24-8041-D69F-8D4081C9CEE2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebhooksService", "WebhooksService", "{4D3B1B60-EBD6-64CE-4B51-0485C27BD2F4}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebshopService", "WebshopService", "{BB1ED6E7-E63E-8D56-8B73-DAD3E9E4F179}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "WebhooksSystem\WebshopService\DataAccessLayer\DataAccessLayer.csproj", "{C4D97D2B-041A-4FBE-B076-7DE95D8CBF9A}"
@@ -19,16 +17,6 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{4D3B1B60-EBD6-64CE-4B51-0485C27BD2F4} = {459EB364-6D24-8041-D69F-8D4081C9CEE2}
-		{BB1ED6E7-E63E-8D56-8B73-DAD3E9E4F179} = {459EB364-6D24-8041-D69F-8D4081C9CEE2}
-		{C4D97D2B-041A-4FBE-B076-7DE95D8CBF9A} = {BB1ED6E7-E63E-8D56-8B73-DAD3E9E4F179}
-		{242E436D-D629-46E8-AA1F-9A416DC8BD52} = {BB1ED6E7-E63E-8D56-8B73-DAD3E9E4F179}
-		{5807C65D-A846-48A1-98C2-5751293677C0} = {BB1ED6E7-E63E-8D56-8B73-DAD3E9E4F179}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{C4D97D2B-041A-4FBE-B076-7DE95D8CBF9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -43,5 +31,14 @@ Global
 		{5807C65D-A846-48A1-98C2-5751293677C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5807C65D-A846-48A1-98C2-5751293677C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5807C65D-A846-48A1-98C2-5751293677C0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BB1ED6E7-E63E-8D56-8B73-DAD3E9E4F179} = {459EB364-6D24-8041-D69F-8D4081C9CEE2}
+		{C4D97D2B-041A-4FBE-B076-7DE95D8CBF9A} = {BB1ED6E7-E63E-8D56-8B73-DAD3E9E4F179}
+		{242E436D-D629-46E8-AA1F-9A416DC8BD52} = {BB1ED6E7-E63E-8D56-8B73-DAD3E9E4F179}
+		{5807C65D-A846-48A1-98C2-5751293677C0} = {BB1ED6E7-E63E-8D56-8B73-DAD3E9E4F179}
 	EndGlobalSection
 EndGlobal

@@ -23,7 +23,6 @@ public class ProductRepository : IProductRepository
             product.Price,
             product.StockQuantity
         );
-        await _context.SaveChangesAsync();
         return product;
     }
 

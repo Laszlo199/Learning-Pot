@@ -15,7 +15,8 @@ public class OrderRepository : IOrderRepository
     }
     public async Task<Order> CreateOrder(Order order)
     {
-        var sql = "INSERT INTO Orders (OrderItems, CustomerId, Customer) VALUES(@p0, @p1, @p2)";
+        var sql = @"INSERT INTO Orders (OrderItems, Status, CustomerId) 
+                    VALUES(@p0, @p1, @p2)";
         await _context.Database
         .ExecuteSqlRawAsync(
             sql,
@@ -23,14 +24,30 @@ public class OrderRepository : IOrderRepository
             order.Status,
             order.CustomerId
         );
-        await _context.SaveChangesAsync();
+
+        foreach(var item in order.OrderItems)
+        {
+            var sqlOrderItem = @"INSERT INTO OrderItems (OrderItemId, OrderId, ProductId, Quantity, Price) 
+                            VALUES (@p0, @p1, @p2, @p3, @p4)";
+                            
+            await _context.Database.ExecuteSqlRawAsync(sqlOrderItem, item.OrderItemId, order.Id, item.ProductId, item.Quantity, item.Price);
+        }
+        
         return order;
+
     }
 
     public async Task<IEnumerable<Order>> GetAllOrder()
     {
-        return await _context.Orders
-        .FromSqlRaw($"SELECT Id, OrderItems, CustomerId, Customer FROM Orders")
-        .ToListAsync();
+        var sql = @"SELECT o.Id, o.Status, o.CustomerId, oi.OrderItemId, oi.ProductId, oi.Quantity, oi.Price
+                FROM Orders o
+                LEFT JOIN OrderItems oi ON o.Id = oi.OrderId";
+
+        var result = await _context.Orders
+            .FromSqlRaw(sql)
+            .AsNoTracking()
+            .ToListAsync();
+
+        return result;
     }
 }
