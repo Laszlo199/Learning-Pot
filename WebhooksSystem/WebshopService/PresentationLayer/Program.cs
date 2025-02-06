@@ -16,9 +16,7 @@ builder.Configuration.AddUserSecrets<Program>();
 
 //Register Repos and Services
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IOrderService, OrderService>();
-builder.Services.AddScoped<IProductService, ProductService>();  
 
 //Register Database
 builder.Services.AddDbContext<WebShopDbContext>(options => 
@@ -38,6 +36,6 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 //Minimal APIs
-app.MapProductEndPoints();
+app.MapOrderEndPoints();
 
 app.Run();
