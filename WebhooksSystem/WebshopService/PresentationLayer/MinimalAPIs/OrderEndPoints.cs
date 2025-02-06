@@ -31,7 +31,7 @@ public static void MapOrderEndPoints(this IEndpointRouteBuilder app)
 
         await service.CreateOrder(newOrder);
 
-        return TypedResults.Created($"Orders '{newOrder.OrderItems}' created successfully.");
+        return TypedResults.Created($"Orders send successfully.");
     }
     
 }
