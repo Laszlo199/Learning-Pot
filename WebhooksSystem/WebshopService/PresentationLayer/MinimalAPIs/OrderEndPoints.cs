@@ -8,10 +8,10 @@ public static class OrderEndPoints
 {
 public static void MapOrderEndPoints(this IEndpointRouteBuilder app)
     {
-        var product = app.MapGroup("orders");
+        var order = app.MapGroup("orders");
 
-        product.MapGet("/", GetAll);
-        product.MapPost("/", Create);
+        order.MapGet("/", GetAll);
+        order.MapPost("/", Create);
     }
 
     static async Task<IResult> GetAll(IOrderService service)
