@@ -22,7 +22,7 @@ public class OrderRepository : IOrderRepository
             sql,
             order.CostumerName,
             order.Status,
-            order.OrderDate
+            DateTime.UtcNow
         );
 
         return order;

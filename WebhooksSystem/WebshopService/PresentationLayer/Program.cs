@@ -17,6 +17,8 @@ builder.Configuration.AddUserSecrets<Program>();
 //Register Repos and Services
 builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderService, OrderService>();
+builder.Services.AddScoped<IWebhookSubscriptionRepository, WebhookSubscriptionRepository>();
+builder.Services.AddScoped<IWebhookSubscriptionService, WebhookSubscriptionService>();
 
 //Register Database
 builder.Services.AddDbContext<WebShopDbContext>(options => 
@@ -37,5 +39,6 @@ app.UseHttpsRedirection();
 
 //Minimal APIs
 app.MapOrderEndPoints();
+app.MapSubscriptionEndPoints();
 
 app.Run();
