@@ -5,5 +5,5 @@ namespace BusinessLogicLayer.Interfaces.IServices;
 
 public interface IWebhookSubscriptionService
 {
-    Task<WebhookSubscription> createSubscription(WebhookSubscription subscription);
+    Task<WebhookSubscription> CreateSubscription(WebhookSubscription subscription);
 }

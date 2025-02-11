@@ -15,18 +15,22 @@ public class OrderRepository : IOrderRepository
     }
     public async Task<Order> CreateOrder(Order order)
     {
-        var sql = @"INSERT INTO Orders (CostumerName, Status, OrderDate) 
-                    VALUES(@p0, @p1, @p2)";
+        order.Id = Guid.NewGuid();
+        order.OrderDate = DateTime.UtcNow;
+
+        var sql = @"INSERT INTO Orders (Id, CostumerName, Status, OrderDate) 
+                    VALUES(@p0, @p1, @p2, @p2)";
+
         await _context.Database
         .ExecuteSqlRawAsync(
             sql,
+            order.Id,
             order.CostumerName,
             order.Status,
-            DateTime.UtcNow
+            order.OrderDate
         );
 
         return order;
-
     }
 
     public async Task<IEnumerable<Order>> GetAllOrder()

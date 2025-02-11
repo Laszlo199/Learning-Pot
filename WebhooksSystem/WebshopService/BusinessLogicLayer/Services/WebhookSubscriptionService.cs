@@ -13,8 +13,8 @@ public class WebhookSubscriptionService : IWebhookSubscriptionService
     {
         _subscriptionRepository = subscriptionRepository;
     }
-    public async Task<WebhookSubscription> createSubscription(WebhookSubscription subscription)
+    public async Task<WebhookSubscription> CreateSubscription(WebhookSubscription subscription)
     {
-        return await _subscriptionRepository.createSubscription(subscription);
+        return await _subscriptionRepository.CreateSubscription(subscription);
     }
 }

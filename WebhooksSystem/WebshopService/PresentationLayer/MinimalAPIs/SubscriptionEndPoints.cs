@@ -19,11 +19,10 @@ public static class SubscriptionEndPoints
         {
             Url = subscription.Url,
             EventType = subscription.EventType,
-            //CreateOn  = subscription.CreateOn
-            CustomerId = subscription.CustomerId
+            CreateOn  = subscription.CreateOn
         };
 
-        await service.createSubscription(newSubscription);
+        await service.CreateSubscription(newSubscription);
 
         return TypedResults.Created($"Subscription created successfully created at {subscription.CreateOn} for the {subscription.EventType}.");
     }

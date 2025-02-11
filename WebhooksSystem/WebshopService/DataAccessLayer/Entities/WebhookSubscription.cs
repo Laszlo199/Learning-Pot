@@ -8,5 +8,5 @@ public class WebhookSubscription
     public string Url { get; set; }
     public string EventType { get; set; }
     public DateTime CreateOn { get; set; }
-    public Guid CustomerId { get; set; }
+    public List<WebhookDeliveryAttempt> DeliveryAttempts { get; set; } = new();
 }

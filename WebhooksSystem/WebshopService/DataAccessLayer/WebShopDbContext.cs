@@ -10,6 +10,7 @@ public class WebShopDbContext : DbContext
     {
     }
 
-    public DbSet<Order> Orders {get; set;}
-    public DbSet<WebhookSubscription> WebhookSubscriptions {get; set;}
+    public DbSet<Order> Orders { get; set; }
+    public DbSet<WebhookSubscription> WebhookSubscriptions { get; set; }
+    public DbSet<WebhookDeliveryAttempt> WebhookDeliveryAttempts { get; set; }
 }
